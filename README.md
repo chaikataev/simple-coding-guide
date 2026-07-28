@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Scheduler
 
-## Getting Started
+Scheduler is a full-stack web app that helps users manage tasks and create schedules.
 
-First, run the development server:
+Users can create an account, sign in, add tasks, edit tasks, mark tasks as complete, and delete tasks. The app also uses the Google Gemini API to create a schedule based on the user's pending tasks and availability.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Live App
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The project is hosted online.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Deployed App:
+https://scheduler-69ee.onrender.com/
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+GitHub Repository:
+https://github.com/chaikataev/Scheduler
 
-## Learn More
+Features for web app
 
-To learn more about Next.js, take a look at the following resources:
+- User signup and signin
+- Password hashing with bcrypt
+- Login sessions stored in MongoDB
+- Add, edit, complete, and delete tasks
+- Add due dates, priorities, and estimated times
+- Generate schedules with Google Gemini
+- Save and delete generated schedules
+- Responsive design
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+stuff used
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Node.js
+- Express
+- EJS
+- MongoDB Atlas
+- Mongoose
+- HTML
+- CSS
+- JavaScript
+- Google Gemini API
 
-## Deploy on Vercel
+Database used
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The app uses MongoDB Atlas.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+User creation style
+- username
+- email
+- password
+
+Task input
+- user
+- title
+- description
+- dueDate
+- priority
+- estimatedMinutes
+- status
+
+Schedule
+- user
+- title
+- availability
+- preferences
+- scheduleContent
+
+API
+
+i used the Google Gemini API.
+
+The server sends the user's pending tasks, deadlines, priorities, estimated times, availability, and preferences to Gemini. Gemini returns a schedule, and the schedule is saved in MongoDB.
